@@ -5,8 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "cp src lib",
-    "start": "node lib/server.js"
+    "build": ""
   },
   "dependencies": {
     "body-parser": "^1.17.2",
