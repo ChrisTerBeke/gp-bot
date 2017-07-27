@@ -1,0 +1,16 @@
+{
+  "name": "gp-bot",
+  "version": "1.0.0",
+  "description": "GP Bot",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "cp src lib",
+    "start": "node lib/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "recastai": "^3.4.1"
+  }
+}
