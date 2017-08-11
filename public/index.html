@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>GP Bot</title>
+
+		<!-- Load styles -->
+		<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap@next/dist/css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="./app.css"/>
+
+	</head>
+	<body>
+
+		<div id="app">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-8">
+						<div class="row">
+
+							<div class="col-lg-6">
+								<div class="card mt-5">
+									<div class="card-block">
+										<p class="lead text-center"><i class="fa fa-heart" aria-hidden="true"></i> Stappen vandaag</p>
+										<h3 class="text-center">{{ stepsToday }}</h3>
+										<canvas id="chart-steps-today"></canvas>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="card mt-5">
+									<div class="card-block">
+									<p class="lead text-center"><i class="fa fa-flag-checkered" aria-hidden="true"></i> Afstand vandaag</p>
+										<h3 class="text-center">{{ distanceToday }} KM</h3>
+										<canvas id="chart-distance-today"></canvas>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-12">
+								<div class="card mt-5">
+									<div class="card-block">
+										<p class="lead text-center"><i class="fa fa-bar-chart" aria-hidden="true"></i> Stappen afgelopen maand</p>
+										<canvas id="chart-steps-month"></canvas>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="card mt-5">
+							<div class="card-block">
+								<p class="lead text-center" @click="enableRecognition"><i class="fa fa-microphone" aria-hidden="true"></i> Praat tegen Robin!</p>
+								<div class="media">
+									<img class="d-flex mr-3" src="./avatar-placeholder.png" width="64px" alt="">
+									<div class="media-body">
+										<div class="speech-bubble">
+											<input type="text" class="input-reset" v-model="textInput" disabled x-webkit-speech>
+											<span>{{ textInput }}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-block">
+								<div class="media">
+									<img class="d-flex mr-3" src="./robin_the_robot.png" width="64px" alt="">
+									<div class="media-body">
+										<div class="speech-bubble">
+											<span class="align-middle" v-if="textResponse == '' && !loading">Stel me een vraag!</span>
+											<span class="align-middle" v-if="textResponse !== '' && !loading">{{ textResponse }}</span>
+											<span class="align-middle" v-if="loading">Even denken...</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-block">
+								<p>Stel vragen als:</p>
+								<ul class="list-group">
+									<li class="list-group-item list-group-item-action" v-on:click="buttonRequest" v-for="question in sampleQuestions">
+										{{ question }}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br/><br/>
+
+		</div>
+
+		<!-- Load Vue and plugins -->
+		<script defer src="https://unpkg.com/vue"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+
+		<!-- Load Chart.js -->
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+		<!-- Load app -->
+		<script defer src="./app.js"></script>
+
+	</body>
+</html>
