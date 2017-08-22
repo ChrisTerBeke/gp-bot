@@ -16,6 +16,9 @@
 	<body>
 
 		<div id="app">
+
+			<br/><br/>
+
 			<div class="container">
 				<div class="row">
 
@@ -23,27 +26,27 @@
 						<div class="row">
 
 							<div class="col-lg-6">
-								<div class="card mt-5">
+								<div class="card">
 									<div class="card-block">
 										<p class="lead text-center"><i class="fa fa-heart" aria-hidden="true"></i> Stappen vandaag</p>
-										<h3 class="text-center">{{ stepsToday }}</h3>
+										<h3 class="text-center" v-if="contexts.length">{{ contexts[0].parameters.steps }}</h3>
 										<canvas id="chart-steps-today"></canvas>
 									</div>
 								</div>
 							</div>
 
 							<div class="col-lg-6">
-								<div class="card mt-5">
+								<div class="card">
 									<div class="card-block">
 									<p class="lead text-center"><i class="fa fa-flag-checkered" aria-hidden="true"></i> Afstand vandaag</p>
-										<h3 class="text-center">{{ distanceToday }} KM</h3>
+										<h3 class="text-center" v-if="contexts.length">{{ contexts[0].parameters.distance }} KM</h3>
 										<canvas id="chart-distance-today"></canvas>
 									</div>
 								</div>
 							</div>
 
 							<div class="col-lg-12">
-								<div class="card mt-5">
+								<div class="card mt-4">
 									<div class="card-block">
 										<p class="lead text-center"><i class="fa fa-bar-chart" aria-hidden="true"></i> Stappen afgelopen maand</p>
 										<canvas id="chart-steps-month"></canvas>
@@ -55,7 +58,16 @@
 					</div>
 
 					<div class="col-lg-4">
-						<div class="card mt-5">
+						<div class="card mb-4" v-if="userData">
+							<div class="card-block">
+								<p class="lead text-center"><i class="fa fa-user" aria-hidden="true"></i> Account</p>
+								<label>Naam</label>
+								<input class="form-control" v-model="userData.username" />
+								<br/>
+								<button class="btn" @click="saveUserData">Opslaan</button>
+							</div>
+						</div>
+						<div class="card">
 							<div class="card-block">
 								<p class="lead text-center" @click="enableRecognition"><i class="fa fa-microphone" aria-hidden="true"></i> Praat tegen Robin!</p>
 								<div class="media">
@@ -81,9 +93,8 @@
 								</div>
 							</div>
 							<div class="card-block">
-								<p>Stel vragen als:</p>
 								<ul class="list-group">
-									<li class="list-group-item list-group-item-action" v-on:click="buttonRequest" v-for="question in sampleQuestions">
+									<li class="list-group-item list-group-item-action small" v-on:click="buttonRequest" v-for="question in sampleQuestions">
 										{{ question }}
 									</li>
 								</ul>

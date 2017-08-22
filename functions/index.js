@@ -17,7 +17,8 @@ app.get('/textRequest', (req, res) => {
 	const query = JSON.parse(req.query.q)
 
 	const request = bot.textRequest(query.text, {
-		sessionId: query.sessionId
+		sessionId: query.sessionId,
+		contexts: query.contexts
 	})
 
 	request.on('response', function(response) {
