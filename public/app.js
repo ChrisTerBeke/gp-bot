@@ -96,6 +96,16 @@ var app = new Vue({
 
 		calculateContexts: function (data) {
 
+			function compareSteps(a, b) {
+				if (a.steps < b.steps) {
+					return 1
+				} else if (a.steps > b.steps) {
+					return -1
+				} else {
+					return 0
+				}
+			}
+
 			var steps_goal = 10000
 			var distance_goal = 5
 			var days_done = 4
@@ -106,6 +116,7 @@ var app = new Vue({
 			var steps_week_goal = steps_goal * 7
 			var steps_week_left = steps_week_goal - steps_week
 			var steps_left_per_day = Math.ceil(steps_week_left / days_left)
+			var most_active_day = data.map(dataPoint => dataPoint).sort(compareSteps)[0]
 
 			this.contexts = [
 				{
@@ -141,10 +152,15 @@ var app = new Vue({
 					parameters: {
 						time: new Date().toLocaleTimeString()
 					}
+				},
+				{
+					name: 'month',
+					parameters: {
+						most_active_day: most_active_day.date,
+						most_active_day_steps: most_active_day.steps
+					}
 				}
 			]
-
-			console.log('contexts', this.contexts)
 		},
 
 		textRequest: function () {
@@ -160,7 +176,6 @@ var app = new Vue({
 			// request to cloud functions
 			this.$http.get(`https://us-central1-gp-bot-a8235.cloudfunctions.net/app/textRequest?q=${query}`).then(response => {
 				this.loading = false
-				console.log('result', response.body.result)
 				this.textResponse = response.body.result.fulfillment.speech
 				this.speak(this.textResponse)
 			}, err => {
@@ -176,12 +191,12 @@ var app = new Vue({
 		},
 
 		enableRecognition: function () {
-			console.log('enable')
+			console.log('enable voice')
 			recognition.start()
 		},
 
 		disableRecognition: function () {
-			console.log('disable')
+			console.log('disable voice')
 			recognition.stop()
 		},
 
