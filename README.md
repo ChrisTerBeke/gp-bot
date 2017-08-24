@@ -53,3 +53,5 @@ Example questions (translated from original Dutch):
 * "How many steps should I do today?"
 * "How many kilometers do I still need to walk today?"
 * "What time is it?"
+
+> An export of the api.ai agent has been added to this project. You can read in the api.ai documentation how to create a new agent and import this data to get an overview of how the agent was configured.
