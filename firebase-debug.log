@@ -1,0 +1,28 @@
+[debug] [2017-08-24T13:10:20.820Z] ----------------------------------------------------------------------
+[debug] [2017-08-24T13:10:20.826Z] Command:       /Users/chris/.nvm/versions/node/v8.1.1/bin/node /Users/chris/.nvm/versions/node/v8.1.1/bin/firebase serve
+[debug] [2017-08-24T13:10:20.827Z] CLI Version:   3.9.2
+[debug] [2017-08-24T13:10:20.827Z] Platform:      darwin
+[debug] [2017-08-24T13:10:20.827Z] Node Version:  v8.1.1
+[debug] [2017-08-24T13:10:20.827Z] Time:          Thu Aug 24 2017 15:10:20 GMT+0200 (CEST)
+[debug] [2017-08-24T13:10:20.827Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-24T13:10:20.851Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-24T13:10:20.851Z] > authorizing via signed-in user
+[debug] [2017-08-24T13:10:20.854Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gp-bot-a8235  
+ Thu Aug 24 2017 15:10:20 GMT+0200 (CEST)
+[debug] [2017-08-24T13:10:21.677Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-24T13:10:21.678Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gp-bot-a8235/tokens  
+ Thu Aug 24 2017 15:10:21 GMT+0200 (CEST)
+[debug] [2017-08-24T13:10:22.402Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/chris/Code/github/ChrisTerBeke/gp-bot'...
+[info] 
+[debug] [2017-08-24T13:10:22.406Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gp-bot-a8235  
+ Thu Aug 24 2017 15:10:22 GMT+0200 (CEST)
+[debug] [2017-08-24T13:10:23.224Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-24T13:10:23.225Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/148357019867/clients/_:getWebAppConfig  
+ Thu Aug 24 2017 15:10:23 GMT+0200 (CEST)
+[debug] [2017-08-24T13:10:23.732Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
