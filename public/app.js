@@ -30,6 +30,7 @@ var app = new Vue({
 			'Hoeveel stappen moet ik ook al weer zetten?',
 			'Hoeveel kilometer moet ik vandaag nog?',
 			'Ben ik actiever geworden de laatste tijd?',
+			'Welke dag was ik het actiefst deze maand?',
 			'Hoe laat is het?'
 		],
 		data: [],
