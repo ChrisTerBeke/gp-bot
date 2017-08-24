@@ -1,0 +1,53 @@
+{
+  "userSays": [
+    {
+      "id": "b28b8506-ef2d-4b04-9845-f0e7c65b7f18",
+      "data": [
+        {
+          "text": "Hoe "
+        },
+        {
+          "text": "laat",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": " is het?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "7536f17a-d1a3-406c-ba19-86268fb814ce",
+  "name": "robin_smalltalk_time",
+  "auto": true,
+  "contexts": [
+    "datetime"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "datetime",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Het is #datetime.time."
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

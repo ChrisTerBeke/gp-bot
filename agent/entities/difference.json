@@ -1,0 +1,15 @@
+{
+  "id": "c410d51e-9d26-4732-b058-577bef96c2b5",
+  "name": "difference",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "procent",
+      "synonyms": [
+        "procent"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

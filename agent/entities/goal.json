@@ -1,0 +1,26 @@
+{
+  "id": "91a47e71-f530-4758-b102-a9653424b5a1",
+  "name": "goal",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "doel",
+      "synonyms": [
+        "doel",
+        "target",
+        "einddoel",
+        "plan",
+        "schema",
+        "doelstelling"
+      ]
+    },
+    {
+      "value": "Hoeveel",
+      "synonyms": [
+        "Hoeveel"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

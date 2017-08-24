@@ -1,0 +1,122 @@
+{
+  "userSays": [
+    {
+      "id": "41d34313-980b-4eb1-b022-2cd7e60d9c71",
+      "data": [
+        {
+          "text": "Hoeveel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "stappen",
+          "alias": "distance",
+          "meta": "@distance",
+          "userDefined": true
+        },
+        {
+          "text": " heb "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "vandaag",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "gelopen",
+          "alias": "activity",
+          "meta": "@activity",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "a53ee038-cfc1-466b-960d-776e939295ba",
+  "name": "activity_steps_today",
+  "auto": true,
+  "contexts": [
+    "today"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "today",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@goal",
+          "name": "goal",
+          "value": "$goal",
+          "isList": false
+        },
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun",
+          "value": "$pronoun",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@activity",
+          "name": "activity",
+          "value": "$activity",
+          "prompts": [
+            "Voor welke activiteit wil je het aantal stappen weten?"
+          ],
+          "isList": true
+        },
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        },
+        {
+          "dataType": "@distance",
+          "name": "distance",
+          "value": "$distance",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Je hebt vandaag al #today.steps stappen gelopen!"
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

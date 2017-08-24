@@ -1,0 +1,141 @@
+{
+  "userSays": [
+    {
+      "id": "c1f1e24e-8e5d-474f-88c2-6066fbce63e0",
+      "data": [
+        {
+          "text": "Wat is "
+        },
+        {
+          "text": "mijn",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " stappen "
+        },
+        {
+          "text": "doel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "vandaag",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "db7128c5-19fe-4701-b523-bc7f274ff91a",
+      "data": [
+        {
+          "text": "Hoeveel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": false
+        },
+        {
+          "text": " stappen moet "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " zetten?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "030f3baa-10f3-428e-8b02-e102bc0e46e9",
+      "data": [
+        {
+          "text": "Hoeveel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": false
+        },
+        {
+          "text": " stappen moet "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " ook al weer zetten?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "20324320-52ae-41b0-aebe-17c67c215e62",
+  "name": "goal_steps_day",
+  "auto": true,
+  "contexts": [
+    "today"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "today",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@goal",
+          "name": "goal",
+          "value": "$goal",
+          "isList": false
+        },
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun",
+          "value": "$pronoun",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Je doel voor vandaag is #today.steps_goal stappen."
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,30 @@
+{
+  "id": "7e824351-cf34-4d94-890f-25ca911f1032",
+  "name": "distance",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "ver",
+      "synonyms": [
+        "ver",
+        "meer"
+      ]
+    },
+    {
+      "value": "kilometer",
+      "synonyms": [
+        "kilometer",
+        "km"
+      ]
+    },
+    {
+      "value": "meter",
+      "synonyms": [
+        "meter",
+        "m"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

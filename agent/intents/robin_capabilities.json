@@ -1,0 +1,154 @@
+{
+  "userSays": [
+    {
+      "id": "daef2390-38dd-4273-86e6-745c67ccb4be",
+      "data": [
+        {
+          "text": "Wat kan "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " je vragen?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "392dbeef-2bd3-46c7-8848-3ee476de6b3a",
+      "data": [
+        {
+          "text": "Wat kan "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": true
+        },
+        {
+          "text": " je allemaal vragen?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9b23a1ba-bfa6-4539-a31c-04d8eab78eb0",
+      "data": [
+        {
+          "text": "Ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": true
+        },
+        {
+          "text": " snap het niet."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3ce8a8d7-ff1b-4bb3-b466-ab37513b3925",
+      "data": [
+        {
+          "text": "Help!"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a0cdf939-98da-47d9-952b-a9c5d712ad3e",
+      "data": [
+        {
+          "text": "Welke mogelijkheden heb je?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ba86c6f5-b761-472e-a4f1-381bf6d129d9",
+      "data": [
+        {
+          "text": "Welke dingen kan "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": true
+        },
+        {
+          "text": " vragen?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "22d1c050-b423-4cee-bf3f-2b30acd4949c",
+      "data": [
+        {
+          "text": "Wat kun "
+        },
+        {
+          "text": "je",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "me",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": true
+        },
+        {
+          "text": " zoal vertellen?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "392c64d9-7d77-4bef-af3d-deaaf5e5bccc",
+  "name": "robin_capabilities",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun",
+          "value": "$pronoun",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Ik kan je alles vertellen over je dagelijkse activiteit. Bekijk de lijst voor een aantal voorbeelden."
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

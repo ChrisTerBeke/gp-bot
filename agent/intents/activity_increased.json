@@ -1,0 +1,102 @@
+{
+  "userSays": [
+    {
+      "id": "d6ff1ade-79a0-4b7a-bfe2-77563275f312",
+      "data": [
+        {
+          "text": "Ben "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "de laatste maanden",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "meer",
+          "alias": "distance",
+          "meta": "@distance",
+          "userDefined": false
+        },
+        {
+          "text": " gaan bewegen?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e14f4e49-0871-43f5-b64f-2e831ceb6aa9",
+      "data": [
+        {
+          "text": "Ben "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " actiever geworden de laatste tijd?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "0de96a71-3791-4a0c-a0bb-c31d0fcfbc0a",
+  "name": "activity_increased",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun",
+          "value": "$pronoun",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        },
+        {
+          "dataType": "@distance",
+          "name": "distance",
+          "value": "$distance",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Ja! Je zet gemiddeld 20 procent meer stappen dan 2 maanden geleden."
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

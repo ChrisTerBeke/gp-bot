@@ -1,0 +1,30 @@
+{
+  "userSays": [],
+  "id": "c9bf0118-a2d3-4699-8438-238210721278",
+  "name": "fallback",
+  "auto": false,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Sorry, ik begrijp je niet. Kun je dat nog eens vragen?",
+            "Sorry, ik versta je niet. Kun je een andere vraag stellen?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": []
+}

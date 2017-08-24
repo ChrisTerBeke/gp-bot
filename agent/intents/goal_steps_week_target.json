@@ -1,0 +1,171 @@
+{
+  "userSays": [
+    {
+      "id": "d3e1f7fb-8585-408f-ac39-3bfd66bc9924",
+      "data": [
+        {
+          "text": "Ben "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deze week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " actief genoeg?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c92c58c1-2683-49eb-aa78-03b035c7998b",
+      "data": [
+        {
+          "text": "Hoeveel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": false
+        },
+        {
+          "text": " stappen moet "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deze week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " nog zetten?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bf51b721-c8e8-4b19-a3ee-421b57aaf227",
+      "data": [
+        {
+          "text": "Ga "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mijn",
+          "alias": "pronoun1",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "doel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deze week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " halen?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "b377fcb2-dc6f-4db2-bc91-d6b9f549ed4f",
+  "name": "goal_steps_week_target",
+  "auto": true,
+  "contexts": [
+    "goal"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "goal",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun",
+          "value": "$pronoun",
+          "isList": false
+        },
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun1",
+          "value": "$pronoun1",
+          "isList": false
+        },
+        {
+          "dataType": "@goal",
+          "name": "goal",
+          "value": "$goal",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Om je doel van #goal.steps_week_goal stappen te halen moet je de komende #goal.days_left dagen nog #goal.steps_left_per_day stappen per dag doen.",
+            "Je hebt nog #goal.days_left dagen om je #goal.steps_week_goal  stappen te halen, als je elke dag #goal.steps_left_per_day stappen doet gaat het lukken!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

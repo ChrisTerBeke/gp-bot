@@ -1,0 +1,103 @@
+{
+  "userSays": [
+    {
+      "id": "49db9e27-b914-4bd7-8334-a1c05e1f36c2",
+      "data": [
+        {
+          "text": "Hoeveel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kilometer",
+          "alias": "distance",
+          "meta": "@distance",
+          "userDefined": false
+        },
+        {
+          "text": " moet "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "vandaag",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " nog?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "7bd90e56-f21d-4a4b-b567-266b87483eb9",
+  "name": "goal_distance_day_target",
+  "auto": true,
+  "contexts": [
+    "today"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "today",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@goal",
+          "name": "goal",
+          "value": "$goal",
+          "isList": false
+        },
+        {
+          "dataType": "@distance",
+          "name": "distance",
+          "value": "$distance",
+          "isList": false
+        },
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun",
+          "value": "$pronoun",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Je moet nog #today.distance_left kilometer om je doel van #today.distance_goal kilometer te bereiken."
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

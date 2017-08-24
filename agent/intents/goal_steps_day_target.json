@@ -1,0 +1,113 @@
+{
+  "userSays": [
+    {
+      "id": "dfcd6b72-314b-4239-b801-fb752b91a213",
+      "data": [
+        {
+          "text": "Hoeveel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": true
+        },
+        {
+          "text": " stappen moet "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": true
+        },
+        {
+          "text": " nog?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "52b8a961-0931-44be-8fd4-638793bd5e6d",
+      "data": [
+        {
+          "text": "Hoeveel",
+          "alias": "goal",
+          "meta": "@goal",
+          "userDefined": false
+        },
+        {
+          "text": " stappen moet "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "vandaag",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " nog doen?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "1e7734d9-4302-48aa-b8e2-1a85145a7f74",
+  "name": "goal_steps_day_target",
+  "auto": true,
+  "contexts": [
+    "today"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "today",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@goal",
+          "name": "goal",
+          "value": "$goal",
+          "isList": false
+        },
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun",
+          "value": "$pronoun",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Je moet nog #today.steps_left stappen."
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

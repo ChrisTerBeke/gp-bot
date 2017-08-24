@@ -1,0 +1,41 @@
+{
+  "id": "70105732-96f6-4011-a59d-f000d0380b56",
+  "name": "activity",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "hardlopen",
+      "synonyms": [
+        "hardloop",
+        "hardlopen",
+        "hard gelopen"
+      ]
+    },
+    {
+      "value": "fietsen",
+      "synonyms": [
+        "fiets",
+        "fietsen",
+        "gefiets"
+      ]
+    },
+    {
+      "value": "cardio",
+      "synonyms": [
+        "cardio",
+        "crossfit",
+        "sportschool",
+        "gym"
+      ]
+    },
+    {
+      "value": "wandelen",
+      "synonyms": [
+        "wandelen",
+        "gewandeld"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

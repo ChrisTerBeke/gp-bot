@@ -1,0 +1,123 @@
+{
+  "userSays": [
+    {
+      "id": "50a327cc-e986-4a1d-bfa8-badb72ea2078",
+      "data": [
+        {
+          "text": "Wat was "
+        },
+        {
+          "text": "mijn",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": true
+        },
+        {
+          "text": " actiefste "
+        },
+        {
+          "text": "dag",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6d99a201-41fe-48ef-83b5-c784ae6cf9ae",
+      "data": [
+        {
+          "text": "Wanneer was "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " het meest actief?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a8661579-8e8b-44f3-ac4c-f6287d946894",
+      "data": [
+        {
+          "text": "Welke dag was "
+        },
+        {
+          "text": "ik",
+          "alias": "pronoun",
+          "meta": "@pronoun",
+          "userDefined": false
+        },
+        {
+          "text": " het actiefst "
+        },
+        {
+          "text": "deze maand",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "8b48d273-66fd-494a-9d73-6033e23521df",
+  "name": "activity_day_most_active",
+  "auto": true,
+  "contexts": [
+    "month"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "month",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@pronoun",
+          "name": "pronoun",
+          "value": "$pronoun",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Je actiefste dag was #month.most_active_day, je hebt toen #month.most_active_day_steps stappen gezet!"
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

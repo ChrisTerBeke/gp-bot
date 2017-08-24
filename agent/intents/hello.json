@@ -1,0 +1,89 @@
+{
+  "userSays": [
+    {
+      "id": "185d97d0-de22-43f3-be9d-1c37b572a15a",
+      "data": [
+        {
+          "text": "Hoi Robin"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "726116d6-cce5-4bbe-9616-b61f2d952032",
+      "data": [
+        {
+          "text": "Hallo Robin"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "cf10b0c5-ccef-4339-b986-fc4972eddb97",
+      "data": [
+        {
+          "text": "Goedendag"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3e1b308b-ee7b-4ae0-a2e5-bda1c6b78f81",
+      "data": [
+        {
+          "text": "Hallo"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1d26e2f6-b730-4e5c-a95d-696686c0e35f",
+      "data": [
+        {
+          "text": "Hoi"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "e523e5c0-7acc-453d-a1fc-02484256ab4b",
+  "name": "hello",
+  "auto": true,
+  "contexts": [
+    "user"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [
+        {
+          "name": "user",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Hallo #user.username!",
+            "Goedendag #user.username!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

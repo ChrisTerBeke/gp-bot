@@ -1,0 +1,31 @@
+{
+  "id": "7ba80107-48da-4435-9055-f4b58c8a5b08",
+  "name": "pronoun",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "ik",
+      "synonyms": [
+        "ik",
+        "jij",
+        "zij"
+      ]
+    },
+    {
+      "value": "mijn",
+      "synonyms": [
+        "mijn",
+        "jouw",
+        "hun"
+      ]
+    },
+    {
+      "value": "me",
+      "synonyms": [
+        "me"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

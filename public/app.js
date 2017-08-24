@@ -25,6 +25,7 @@ var app = new Vue({
 		textResponse: '',
 		loading: false,
 		sampleQuestions: [
+			'Hoi Robin!',
 			'Hoeveel stappen heb ik vandaag gelopen?',
 			'Ga ik mijn doel deze week halen?',
 			'Hoeveel stappen moet ik ook al weer zetten?',
